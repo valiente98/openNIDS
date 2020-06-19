@@ -1,7 +1,7 @@
 # openNIDS
 Heuristic-based NIDS over Machine Learning.
 
-![Output sample](https://github.com/valiente98/openNIDS/openNIDS.gif)
+![Output sample](https://github.com/valiente98/openNIDS/blob/master/openNIDS.gif)
 
 
 *This application was developed for my Telecommunications Engineering bachelor's final thesis.*
