@@ -14,6 +14,7 @@ import pickle
 import numpy as np
 import subprocess
 import os
+import argparse
 
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -46,6 +47,9 @@ class WaitFlows(QtWidgets.QWidget):
 
 		super(WaitFlows, self).__init__()
 
+		#Arguments of the program.
+		self.args = parse()
+
 		#Create dialog.
 		label = QtWidgets.QLabel('Waiting for flows...')
 		label.setAlignment(QtCore.Qt.AlignCenter)
@@ -71,8 +75,8 @@ class WaitFlows(QtWidgets.QWidget):
 	#Checks if traffic is detected for showin main window.
 	def startCondition(self):
 
-		#Change it!! Interface from where the traffic will be captured.
-		subprocess.call(["./idsCapture.sh", "enp0s9"])
+		#Captures and cretaes net flows.
+		subprocess.call(["./idsCapture.sh", self.args.interface])
 		csvLines = 0
 
 		#Get flows.
@@ -108,7 +112,10 @@ class ShowFlows(QtWidgets.QWidget):
 	def __init__(self, parent=None):
 
 		super(ShowFlows, self).__init__()
-		
+
+		#Arguments of the program.
+		self.args = parse()
+	
 		#Widgets data variables.
 		self.benignFlows = 0
 		self.malignFlows = 0
@@ -317,7 +324,7 @@ class ShowFlows(QtWidgets.QWidget):
 	def iterateUpdateLoop(self):
 		
 		#Captures and creates the network flows.
-		subprocess.call(["./idsCapture.sh", "enp0s9"])
+		subprocess.call(["./idsCapture.sh", self.args.interface])
 		#Updates GUI info.
 		QtCore.QTimer.singleShot(100, lambda: self.updateGui())
 		
@@ -401,6 +408,18 @@ class ShowFlows(QtWidgets.QWidget):
 		chartview.setRenderHint(QtGui.QPainter.Antialiasing)
 		
 		return chartview
+	
+#Parse the arguments of the program.
+def parse():
+	
+	#Creates and instance of argument parser.
+    parser = argparse.ArgumentParser()
+    
+    #Interface from where capture traffic argument.
+    parser.add_argument("-i","--interface", help="TCPDUMP interface used", default="lo")
+    
+    #Return the arguments parsed.
+    return parser.parse_args()
 
 #Main method.
 def main():
