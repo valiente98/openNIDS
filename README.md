@@ -1,8 +1,6 @@
 # openNIDS
 Heuristic-based NIDS over Machine Learning.
 
-<img src="https://github.com/javiln8/wifi_spartan/blob/master/images/logo.png?raw=true" width="500">
-
 *This application was developed for my Telecommunications Engineering bachelor's final thesis.*
 *This project is the result of the final degree project done for my Baschelor's degree in Computer Engineering*
 
