@@ -15,6 +15,6 @@ sudo apt install libpcap-dev
 sudo apt install tcpdump
 
 #Create required directories in openNIDS-code
-mkdir openNIDS/csv
-mkdir openNIDS/pcap
-mkdir openNIDS/logs
+mkdir openNIDS-code/csv
+mkdir openNIDS-code/pcap
+mkdir openNIDS-code/logs
