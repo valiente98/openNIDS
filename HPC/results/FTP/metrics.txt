@@ -1,0 +1,11 @@
+Metrics for FTP attack.
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+Fscore: 1.0
+
+Confusion Matrix:
+
+                  malign  benign
+predicted_malign   48458       0
+predicted_benign       0  165833

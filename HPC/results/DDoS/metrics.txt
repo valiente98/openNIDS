@@ -1,0 +1,11 @@
+Metrics for DDoS attack.
+Accuracy: 0.999959274422
+Precision: 0.999838487994
+Recall: 0.999873319504
+Fscore: 0.999855903446
+
+Confusion Matrix:
+
+                  malign   benign
+predicted_malign  315715       40
+predicted_benign      51  1918662

@@ -1,0 +1,11 @@
+Metrics for SSH attack.
+Accuracy: 0.999990603712
+Precision: 0.99995741419
+Recall: 1.0
+Fscore: 0.999978706641
+
+Confusion Matrix:
+
+                  malign  benign
+predicted_malign   46962       0
+predicted_benign       2  165886

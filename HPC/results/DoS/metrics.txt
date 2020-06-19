@@ -1,0 +1,11 @@
+Metrics for DoS attack.
+Accuracy: 0.999982767897
+Precision: 0.999963251282
+Recall: 0.999981625303
+Fscore: 0.999972438208
+
+Confusion Matrix:
+
+                  malign  benign
+predicted_malign  163265       3
+predicted_benign       6  359007

@@ -1,0 +1,14 @@
+Metrics for General attack.
+Accuracy: 0.992464717608
+Precision: 0.993515068483
+Recall: 0.992464717608
+Fscore: 0.992799782061
+
+Confusion Matrix:
+
+               SSH    FTP     DoS    DDoS   benign
+pred_SSH     46302      8       1       0        1
+pred_FTP         0  42681    5367       0        0
+pred_DoS         0  17165  290743      53       42
+pred_DDoS        0      0      35  171717        8
+pred_benign      1      0      53       7  2443752
