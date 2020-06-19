@@ -4,11 +4,10 @@ Heuristic-based NIDS over Machine Learning.
 ![Output sample](https://github.com/valiente98/openNIDS/blob/master/openNIDS.gif)
 
 
-*This application was developed for my Telecommunications Engineering bachelor's final thesis.*
 *This project is the result of the final degree project done for my Baschelor's degree in Computer Engineering*
 
 ### Introduction
-openNIDS is an *open-source* heuristic-based NIDS available for Linux detecnting four types of attacks using Random Forest ML algorithm developed in Python 3.0+ using scikit-learn module. The traffic of a monitored network is captured and classified as benign or malign traffic. The four attacks detected by openNIDS and the tools used for performing them are:
+openNIDS is an *open-source* heuristic-based NIDS available for Linux detecting four types of attacks developed in Python 3.0+. Random Forest classifier ML algorithm provided scikit-learn module is used for generating the four attack-specified classifiers. The traffic of a monitored network is captured and classified as benign or malign traffic. The four attacks detected by openNIDS and the tools used for performing them are:
 
 - [x] `SSH brute-force login attacks:`	Patator.
 - [x] `FTP brute-force login attacks:`	Patator.
@@ -19,7 +18,7 @@ The results are displayed in a PySide2 GUI. Thus, this project has been divided 
 
 * **HPC/**: contains all the necessary Python 3.0+ and bash scrips for training the attack-specified classifiers. As four attacks are detected, four attack-specified classifiers are trained from the CSE-CIC-IDS2018 dataset (check the link in references section). HPC is only available for DTIC memebers of Universitat Pompeu Fabra (Barcelona).  
 
-* **openNIDS-code/**: contains all the necessary files for running the GUI. TCPDUMP_and_CICFlowMeter project was modified for using it. The GUI is created using PySide2 module which is *open-source* and very similar to PyQt5.
+* **openNIDS-code/**: contains all the necessary files for running the GUI. TCPDUMP_and_CICFlowMeter project was modified for using it. The GUI is created using PySide2 module which is completely *open-source* and very similar to PyQt5.
 
 openNIDS GUI execution can be summarized in four steps, as follows:
 
@@ -56,7 +55,7 @@ First, go to "openNIDS-code" directory by running:
 cd openNIDS-code/
 ```
 
-For running openNIDS, a network interface must be given. You can check the availabel options by running `python3 openNIDS.py --help`. The interface is the only attribute needed by openNIDS. By default, **lo** network interface is set.
+For running openNIDS, a network interface must be given. You can check the available options by running `python3 openNIDS.py --help`. The interface is the only attribute needed by openNIDS. By default, **lo** network interface is set.
 
 Finally, run the following command for starting openNIDS GUI: 
 
@@ -68,8 +67,9 @@ sudo python3 openNIDS.py -i <network_interface>
 
 ### References
 
-- [scikit-learn](https://scikit-learn.org/stable/).
+- [Random forest classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html).
 - [PySide2](https://pypi.org/project/PySide2/).
+- [pickle](https://docs.python.org/3/library/pickle.html).
 - [CSE-CIC-IDS2018 dataset](https://www.unb.ca/cic/datasets/ids-2018.html).
 - [TCPDUMP_and_CICFlowMeter](https://github.com/iPAS/TCPDUMP_and_CICFlowMeter).
 
