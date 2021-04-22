@@ -1,5 +1,5 @@
 # openNIDS
-Heuristic-based NIDS over Machine Learning.
+Heuristic-based NIDS over Machine Learning. Full document available in this [link](http://hdl.handle.net/10230/45892).
 
 ![Output sample](https://github.com/valiente98/openNIDS/blob/master/openNIDS.gif)
 
